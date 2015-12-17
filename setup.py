@@ -7,9 +7,9 @@ setup(name='cabot-alert-wechat',
       description='',
       author='xiaolong.yuanxl',
       author_email='232351936@qq.com',
-      url='https://github.com/yuanxiaolong/cabot-alert-wechat',
+      url='https://github.com/peterae87/cabot-alert-wechat',
       packages=[
-      	'cabot_alert_wechat'
-      	],
-      download_url= 'https://github.com/yuanxiaolong/cabot-alert-wechat'
-     )
+          'cabot_alert_wechat'
+      ],
+      download_url='https://github.com/peterae87/cabot-alert-wechat'
+      )
