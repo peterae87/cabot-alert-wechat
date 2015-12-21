@@ -3,7 +3,6 @@ from django.db import models
 from cabot.cabotapp.alert import AlertPlugin, AlertPluginUserData
 import time
 from django.template import Context, Template
-from os import environ as env
 import requests
 
 wechat_template = """Service {{ service.name }}  {% if service.overall_status != service.PASSING_STATUS %}alerting with status: {{ service.overall_status }}{% else %}is back to normal{% endif %}.
@@ -44,7 +43,7 @@ class WechatAlert(AlertPlugin):
             time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time())), title, content)
 
         # 发送逻辑
-        requests.post('wechatmessage.echele.cn/sendMessage', data={
+        requests.post('http://wechatmessage.echele.cn/sendMessage', data={
             "title": title,
             "content": content,
             "appType": "ALERT"
